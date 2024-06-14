@@ -1,0 +1,12 @@
+default: &default
+  service_a: <%= ENV['SERVICE_A_URL'] %>
+  service_b: <%= ENV['SERVICE_B_URL'] %>
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default
